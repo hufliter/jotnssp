@@ -1,0 +1,48 @@
+#carousel3 {
+	margin-left:28px;
+	padding:0 10px;
+	background:transparent url('../images/front/board.png') center repeat;
+	box-shadow: 1px 1px 4px #777;
+}
+#carousel3:after, #carousel3:before {
+	content:' ';
+	position: absolute;
+	width: 64px;height: 63px;
+	background: transparent url('../images/front/tap_right.png') center no-repeat;
+}
+#carousel3:before {
+	top:-10px;left:-25px;
+}
+#carousel3:after {
+	bottom:-20px;right:-20px;
+}
+#carousel3 .carousel-inner li {margin-bottom:0 !important;}
+#carousel3 .thumbnails .span3:first-child {
+	margin-left:10px;
+}
+#carousel3 .thumbnails .span3 {
+	background: none;
+	margin-left:0;
+}
+#carousel3 .thumbnails .span3 .thumbnail {
+	text-align: center;
+	border: 0;
+}
+#carousel3 .thumbnails .span3 a:hover img {
+	border-color:#ee458e;
+}
+#carousel3 .thumbnails .span3 .thumbnail img {
+ 	border:5px solid #d18286;
+ 	box-shadow: none !important;
+ }
+ #carousel3 .product-review {
+ 	text-align: center;
+ 	height: 17px;
+ 	overflow: hidden;
+ }
+ #carousel3 a {
+ 	font:15px/16px "Times New Roman";
+ 	color:#8c4444;
+ }
+ #carousel3 .carousel-control.right {right:-11px;}
+ #carousel3 .carousel-control.left {left:-11px;}

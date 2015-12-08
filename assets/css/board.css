@@ -1,0 +1,244 @@
+.twitter-share-button {width: 100px !important}
+.board {
+	padding:10px;
+	background:transparent url('../images/front/board.png') top left repeat;
+	box-shadow: 0 0 6px -1px #888;
+}
+.board:after {
+	content:' ';
+	position: absolute;
+	width: 227px;height: 69px;
+	top:0;right:20px;
+	background: transparent url('../images/front/board_deco.png') center no-repeat;
+}
+.board_ribbon:after {
+	right:160px !important;
+}
+.board_ribbon:before {
+	content:' ';
+	position: absolute;
+	width: 161px;height:115px;
+	left:521px;top:-1px;
+	background:transparent url('../images/front/ribbon.png') top left no-repeat
+}
+.board .label {
+	margin-top:18px;
+	margin-bottom: 10px;
+	margin-left:-20px !important;
+	font:normal 22px/38px Tahoma;
+	text-indent: 20px;
+	background: #e7779d;
+	height:41px;
+	border-radius:0;
+	padding:0 !important;
+	display: inline-block;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+}
+.board .label:before {
+	content:' ';
+	position: absolute;
+	top:-15px;left:0;
+	border-bottom:10px solid #e7779d;
+	border-left:7px solid transparent;
+	border-top:5px solid transparent;
+}
+.board .label:after {
+	content:' ';
+	position: absolute;
+	width: 37px;height: 47px;
+	top:-3px;right: -36px;
+	background:transparent url('../images/front/board_label.png') center no-repeat;
+	z-index: 10;
+}
+.board .headline {
+	margin:55px -20px 70px;
+	height:59px;
+	text-align: center;
+	background:transparent url('../images/front/pink_dash_line.png') repeat-x top left;
+}
+.board .headline:before {
+	content: '';
+	position: absolute;
+	top:-10px;left:0;
+	border-left:7px solid transparent;
+	border-bottom: 13px solid #db5a97
+}
+.board .headline:after {
+	content: '';
+	position: absolute;
+	top:-9px;right: 0px;
+	border-top: 12px solid transparent;
+	border-left: 8px solid #db5a97;
+}
+.board .product_name {
+	position: relative;
+	margin-top:5px;margin-left:20px;
+	display: table;
+	width: 232px;min-height: 94px;height:94px;
+	font:bold 23px/24px "Times New Roman";
+	color:#a34e4e;
+	background:transparent url('../images/front/product_label.png') top left no-repeat;
+}
+.board .product_name:after {
+	content:' ';
+	position: absolute;
+	top:0;left:50px;
+	width: 92px;height: 20px;
+	background: transparent url('../images/front/tape_center.png') top left no-repeat;
+}
+.board .product_name span {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+#polygon_tag {
+	position: relative;
+	top:-40px;
+	display: block;
+	width: 234px;height: 147px;
+	margin:0 auto;
+	background: transparent url('../images/front/polygon_tag.png') center no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 114px;
+	color:#996a6f;
+}
+#board_thumb {
+	width: 300px;height: 320px;
+	text-align: center;
+	background:transparent url('../images/front/board_thumb.png') center no-repeat;
+}
+#board_thumb:after, #board_thumb:before {
+	content: ' ';
+	position: absolute;
+	width: 63px;height: 63px;
+	background:transparent url('../images/front/tap_right.png') center no-repeat;
+}
+#board_thumb:before {top:0;left:0;}
+#board_thumb:after {bottom:0;right:0;}
+
+#board_thumb img {
+	width: 230px;height: 225px;
+	margin:25px 0 0 -7px;
+	box-shadow: 2px 2px 4px #555;
+}
+.board .sub_product_text {
+	width: 330px;
+	margin-left: -13px !important;
+	margin-top:-25px;
+	background: transparent url('../images/front/sub_product_text.png') top left no-repeat;
+	background-size: 332px 500px;
+}
+.board .product_text {
+	width: 298px;
+	min-height: 500px;
+	margin:0 0 10px 3px;
+	padding:20px 4px;
+	font-size:13px/13px Arial;
+}
+#carousel_small_image {margin-bottom: 0}
+#carousel_small_image .thumbnail {
+	height: 81px;width: 84px;
+	background: transparent url('../images/front/carousel_thumbnail.png') top left repeat;
+}
+#carousel_small_image .thumbnail img {
+	width: 84px;height: 80px;
+	cursor:pointer;
+}
+.carousel-small-control .carousel-control {
+	border:0;
+	background:none;
+	opacity: 1;
+}
+#carousel_small_image .carousel-control.left {left:-26px;}
+#carousel_small_image .carousel-control.right {right:-26px;}
+
+.product_share {
+	border:2px solid white;
+	border-left:0;border-right:0;
+	padding:8px 0;
+}
+.product-price {
+	border:1px dashed black;
+	box-shadow:1px 2px 5px -1px black;
+	margin-top:1px;
+	border-radius:25px;
+	-webkit-border-radius:25px;
+	-moz-border-radius:25px;
+}
+#elevatezoom .span4 {background:none;margin-left:3px !important;padding:0 !important;}
+#detail_product .product-price {
+	font:22px/49px Tahoma;
+	height: 49px !important;
+	border:2px dashed black;
+	margin-left:-5px !important;
+}
+
+#product_relative {
+	width: 269px;height: 82px;
+	background: transparent url('../images/front/product_relative.png') center no-repeat;
+}
+
+.white_border {border:2px dashed white;}
+.breadcrumb {
+	padding:0;
+	color:#a35858;
+	background:none;
+	border:none;
+	border-radius:0;
+}
+.breadcrumb a, .breadcrumb li.active {
+	color:#a35858;
+	font:bold 13px/12px Tahoma;
+}
+.breadcrumb .divider {color:#ec529d !important;}
+
+.thumbnails .span3:first-child {
+	margin-left:5px;
+}
+.thumbnails .span4:first-child {margin-left:5px !important;}
+.thumbnails .span4 {
+	padding:17px 0;
+	margin-left:10px;
+	background: transparent url('../images/front/product_list_background.png') top left no-repeat;
+}
+.thumbnails .thumbnail img {
+	box-shadow: 1px 1px 5px #555;
+}
+.product-content .product-review a,.product-content .product-review a:visited {color:white;}
+.product-content .product-review a:hover,.product-content .product-review a:active {color:black;}
+.product-content .product-review .product-price {
+	box-shadow: 1px 1px 5px #555;
+}
+.product-content:after, .product-content:before {display: none;}
+.tip_review_thumb {
+	padding:5px;
+	margin-left: 20px !important;
+	height: 110px;width: 160px !important;
+	background: transparent url('../images/front/tip_review_thumb.png') center no-repeat;
+}
+.tip_review_thumb img {
+	width: 150px;height: 100px;
+}
+.tip_review_text {
+	width: 450px !important;
+	height: 157px;
+	padding: 10px 15px 10px 10px;
+	color:#673535;
+	font:bold 14px/16px "Times New Roman";
+	background:transparent url('../images/front/tip_review.png') top left no-repeat;
+	overflow: hidden;
+}
+.tip_review_text a {
+	display: block;
+	margin:0 0 5px;
+	font:bold italic 20px/17px "Times New Roman";
+	color:#673535;
+}

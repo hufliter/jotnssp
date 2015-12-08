@@ -1,0 +1,118 @@
+.nonDeco:after {display:none}
+#contact_name img {margin-top:-15px;}
+.small_ribbon {
+	background:#eb9abd;
+	height: 20px;
+	margin:0 -20px 10px;
+	box-shadow: 0 2px 10px -3px black;
+	-moz-box-shadow:0 2px 10px -3px black;
+	-webkit-box-shadow:0 2px 10px -3px black;
+}
+.small_ribbon:before, .small_ribbon:after {
+	content: '';
+	position: absolute;
+	bottom:-8px;
+	border-top:8px solid #c37395;
+}
+.small_ribbon:before {
+	left:0;
+	border-left:8px solid transparent;
+}
+.small_ribbon:after {
+	right:0;
+	border-right:8px solid transparent;
+}
+.backlink {margin:0 0 40px;padding:0 20px;}
+.backlink a, .backlink a:hover {
+	text-decoration: none;
+	color:#f55ca2;
+	font:bold 15px/18px Tahoma;
+	text-shadow: -1px -1px white,-1px 1px white, 1px -1px white, 1px 1px white,-2px -2px white,-2px 2px white,2px -2px white,2px 2px white;
+}
+.contact_content {
+	margin:-80px 0 0 10px;
+	padding: 90px 0 20px 5px;
+	background: transparent url('../images/front/pink_cols.png') center repeat;
+}
+.contact_content .span8 {
+	background: #f6ecd7;
+	padding: 10px;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(119,119,119,1);
+	-moz-box-shadow: 0px 3px 5px 0px rgba(119,119,119,1);
+	box-shadow: 0px 3px 5px 0px rgba(119,119,119,1);
+}
+#top_letter {
+	height: 158px;
+	color:#52443c;
+	padding:40px;
+	text-align: center;
+	font:65px/35px kirnberg,Tahoma;
+	background:transparent url('../images/front/top_letter_background.png') top left no-repeat;
+}
+#contain_letter {
+	width: 395px !important;
+	min-height: 500px;
+	margin:20px 0 0 5px;
+	padding:30px 10px 5px;
+	border:2px solid #bba68c;
+	border-top:0;
+	border-bottom:0;
+}
+#bottom_letter {
+	margin:15px 0 0;
+	height:151px;
+	background:transparent url('../images/front/bottom_letter_background.png') top left no-repeat;
+}
+.letter_box:before {
+	content:'';
+	position: absolute;
+	width: 65px;height: 27px;
+	top:50%;left:-40px;
+	background:transparent url('../images/front/letter_hole.png') top left no-repeat;
+}
+.letter_box {
+	width:180px;height: 180px;
+	margin-left:5px;
+	margin-bottom:150px;
+	padding:5px;
+	background:#f4eada;
+	moz-box-shadow: 0px 2px 7px #555555;
+	-webkit-box-shadow: 0px 2px 7px #555555;
+	box-shadow: 0px 2px 7px #555555;
+}
+.letter_box:last-child {margin-bottom: 0}
+.letter_box .letter_box_deco {
+	display: block;
+	width: 150px;height: 150px;
+	margin:15px;
+	background:#e4d4b8;
+}
+.letter_box .link_letter_holder {
+	width: 100%;height: 100%;
+	top:-180px;
+	background:transparent url('../images/front/letter_box_deco.png') center no-repeat;
+}
+.letter_box a {
+	width: 100px;height: 100px;
+	top:36px;left:36px;
+	border:5px solid #716360;
+	border-radius: 60px;
+	-webkit-border-radius:60px;
+	-moz-border-radius:60px;
+	background: -moz-linear-gradient(-45deg,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* IE10+ */
+background: linear-gradient(135deg,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.letter_box a:hover {text-decoration: none;}
+.letter_box a p {
+	width: 90px;height: 80px;
+	margin:25px auto;
+	text-align: center;
+	font:bold 15px/15px Tahoma;
+	color:#534741;
+}

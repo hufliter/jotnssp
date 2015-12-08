@@ -1,0 +1,85 @@
+#news_label {
+	background:transparent url('../images/front/news_line.png') repeat-x top left;
+}
+#news_label img {margin-top: -35px;}
+#news_review_content .span6:first-child .news_review_box:first-child {
+	margin-left:40px;
+}
+#news_review_content .span6:first-child .news_review_box:nth-child(2) {
+	margin-left:-10px;
+}
+#news_review_content .span6:nth-child(2) {
+	margin-top:-90px;
+	padding-left:30px;
+}
+.news_review_title {
+	display: table !important;
+	width: 184px !important;height:64px;
+	padding:5px 5px 5px 30px;
+	background: transparent url('../images/front/news_review_tag.png') top left no-repeat;
+}
+.news_review_title a, .news_review_title a:visited {
+	display: table-cell;
+	vertical-align: middle;
+	color:white;
+	font:bold italic 16px/16px "Times New Roman";
+}
+.news_review_title_reverse {
+	float:right !important;
+	margin-right: -25px;
+	padding:5px 25px 5px 5px !important;
+	background-image:url('../images/front/news_review_tag_reverse.png');
+}
+.news_review {
+	width:300px !important;height:171px;
+	padding:40px 20px 25px;
+	margin:-35px 0 0 24px !important;
+	font:bold 13px/16px "Times New Roman";
+	color:#673535;
+	background:transparent url('../images/front/news_review_bg.png') top left no-repeat;
+}
+.news_review_reverse {
+	background-image:url('../images/front/news_review_bg_reverse.png');
+}
+#news_detail {
+	padding:0 0 30px 55px;
+	background:transparent url('../images/front/papers_background.png') -15px 50px no-repeat;
+	margin-bottom:20px;	
+}
+#news_detail_header {
+	float:none !important;
+	margin-left:-25px;
+	transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+}
+#news_detail_header a:hover {text-decoration: none}
+#news_detail_content {
+	padding:0;
+	margin-top:-17px;
+	color:#857861;
+	font:bold 12px/15px Arial;
+	min-height: 580px;
+	border-style: solid;
+	border-width: 87px 80px 107px 43px;
+	-moz-border-image: url('../images/front/paper_background.png') 87 80 107 43 stretch repeat;
+	-webkit-border-image: url('../images/front/paper_background.png') 87 80 107 43 stretch repeat;
+	-o-border-image: url('../images/front/paper_background.png') 87 80 107 43 stretch repeat;
+	border-image: url('../images/front/paper_background.png') 87 80 107 43 fill stretch repeat;
+}
+#news_detail_content:after {
+	content:'';
+	position: absolute;
+	bottom:70px;left:300px;
+	width: 80px;height: 36px;
+	background: transparent url('../images/front/sign.png') center no-repeat;
+}
+.tag_line:after {
+	position:absolute;
+	content: '';
+	top:28px;right:-120px;
+	width: 137px;height: 65px;
+	background: transparent url('../images/front/tag_line.png') center no-repeat;
+}

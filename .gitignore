@@ -1,0 +1,6 @@
+/.idea
+/assets/upload
+/assets/images/captcha
+/vendor
+/shell
+.composer.lock

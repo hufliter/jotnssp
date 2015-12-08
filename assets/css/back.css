@@ -1,0 +1,32 @@
+.footer {
+	text-align:center;
+	padding:30px 0;
+	margin-top:30px;
+	border-top:1px solid #e5e5e5;
+	background-color:#f5f5f5;
+}
+.round {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+body {margin:80px 0 0 0;}
+@media (max-width: 979px){
+	body {
+		margin-top:0;
+	}
+}
+.reduce {
+	padding:5px 0;
+}
+hr {margin:10px 0;}
+.table thead th a.sortRow {
+	display: block;
+	background:url('../images/back/sort.png') no-repeat 100% -5%;
+}
+.table thead th a.sortRow.asc {
+	background-position: 100% 49%;
+}
+.table thead th a.sortRow.desc {
+	background-position: 100% 114%;	
+}

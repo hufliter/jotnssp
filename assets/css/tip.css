@@ -1,0 +1,13 @@
+.contact_content {
+	padding-top:0;
+	min-height:900px;
+	margin-left:1px !important;
+	background: transparent url('../images/front/contact_content.png') top center no-repeat;
+	background-size: 620px 900px;
+	border-style: solid;
+	border-width: 80px 43px 61px 40px;
+	-moz-border-image: url(../images/front/contact_content.png) 80 43 61 59;
+	-webkit-border-image: url(../images/front/contact_content.png) 80 43 61 59;
+	-o-border-image: url(../images/front/contact_content.png) 80 43 61 59;
+	border-image: url(../images/front/contact_content.png) 80 43 61 59 fill;
+}
