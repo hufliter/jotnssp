@@ -119,6 +119,11 @@ $baseUrl = base_url();
                                     <i class="icon-briefcase"></i> Tuyển dụng
                                 </a>
                             </li>
+                            <li>
+                                <a href="<?php echo base_url() ?>admincp/policy">
+                                    <i class="icon-book"></i> Chính sách
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="divider-vertical"></li>

@@ -122,6 +122,24 @@ $checkAuth = \Jotun\JotunAuth::instance()->check();
     <a href="<?= base_url() ?>dat-hang" class="text_cart"> <span>Giỏ hàng</span></a>
 </div>
 <!-- thuat_layout : cart tag  -->
+<!-- search form -->
+<div class="search_tag">
+    <!-- <div class="cart_icon">
+        <span class="cart_count_product"><?= \Jotun\Cart\Cart::getInstance()->getTotal() ?></span>
+    </div>
+    <a href="<?= base_url() ?>dat-hang" class="text_cart"> <span>Giỏ hàng</span></a> -->
+    <?php
+    echo form_open('/product/search/', 'method="get" class="search-tag-box"');
+    echo form_input(array(
+            'name' => 'q', 'value' => '', 'id' => 'search_input',
+            'placeholder' => 'Tên sản phẩm', 'required' => 'required'
+        )) . form_submit(array(
+            'name' => '', 'value' => '', 'id' => 'search_submit'
+        ));
+    echo form_close();
+    ?>
+</div>
+<!-- end search form -->
 <div class="container fill">
     <div class="row">
         <div class="span12 wall">
@@ -148,9 +166,9 @@ $checkAuth = \Jotun\JotunAuth::instance()->check();
             </section>
             <nav class="row show">
                 <div class="span2 offset1 text-center" style="width: 150px;">
-                    <div class="main_category">
+                    <div class="main_category" style="float: left; width: 190px; position: absolute; left: 60px;">
                         <?php if (!$checkAuth): ?>
-                            <span class="login_icon category_icon"></span>
+                            <span class="login_icon category_icon" style="position: absolute; float: left; left: 0; bottom: 10px;"></span>
                         <?php else: ?>
                             <a href="<?= base_url() ?>opauth/logout"> <span class="logout_icon category_icon"></span>
                         <?php endif; ?>
@@ -191,44 +209,21 @@ $checkAuth = \Jotun\JotunAuth::instance()->check();
                 </div>
             </nav>
             <section class="row show">
-                <div class="span3" id="logo_left">
-                    <!-- thuat_layout : login section  -->
-                    <div class="login_section">
-                        <?php if (!$checkAuth): ?>
-                            <img src="/assets/images/front/icon_lock.png">
-                        <?php else: ?>
-                            <a href="<?= base_url() ?>opauth/logout"> <img src="/assets/images/front/logout.gif"></a>
-                        <?php endif; ?>
-
-                        <div class="clear"></div>
-                        <!-- change to "Đơn hàng" after login  -->
-                        <?php if ($checkAuth) : ?>
-                            <a class="btn_login" href="<?php echo base_url('product/list_order'); ?>">Xem đơn hàng</a>
-                        <?php else : ?>
-                            <a class="btn_login" href="<?php echo base_url('opauth/facebook'); ?>">Đăng nhập</a>
-                        <?php endif; ?>
-                        <div class="clear"></div>
-                        <!-- Just show this if user's permision is CTV of VIP after login  -->
-                        <?php if (\Jotun\JotunAuth::instance()->hasRole(ROLE_RESELLER)): ?>
-                            <a style="font-size: 11px;" href="<?= base_url() ?>product/list_order_ctv">Quản lý đơn hàng</a>
-                        <?php endif; ?>
-                    </div>
-
-                    <!-- thuat_layout : login section  -->
-                </div>
-                <div class="span9" style="margin-left:10px">
-                    <section id="carousel" class="carousel slide carousel_radius"><?php
+                <div class="span12" style="margin-left:-10px; width:100%;margin-bottom: 20px;">
+                    <section id="carousel" class="carousel slide carousel_radius" style="width:95%"><?php
                         if (empty($mainAds)):
                             $mainAds[0] = new stdClass();
                             $mainAds[0]->thumb = base_url('/assets/images/front/default_slide.jpg');
                         endif;
                         ?>
-                        <div class="carousel-inner carousel_radius"><?php
+                        <div class="carousel-inner carousel_radius" style="width:98%"><?php
                             foreach ($mainAds as $k => $v):
-                                //echo $v->img;
                                 ?>
                                 <div class="item carousel_radius <?php echo ($k == 0) ? 'active' : null; ?>"><?php
-                                echo anchor($v->link, img($v->img));
+                                echo anchor($v->link, img(array(
+                                    'src' => $v->img,
+                                    'style' => 'width:100%',
+                                )));
                                 ?></div><?php
                             endforeach;
                             ?></div>
@@ -283,20 +278,8 @@ $checkAuth = \Jotun\JotunAuth::instance()->check();
                             endif;
                             ?></ul>
                     </nav>
-                    <div id="search">
-                        <span id="search_label"></span>
-
-                        <div id="search_box" class="main_category"><?php
-                            echo form_open('/product/search/', 'method="get"');
-                            echo form_input(array(
-                                    'name' => 'q', 'value' => '', 'id' => 'search_input',
-                                    'placeholder' => 'Tên sản phẩm', 'required' => 'required'
-                                )) . form_submit(array(
-                                    'name' => '', 'value' => '', 'id' => 'search_submit'
-                                ));
-                            echo form_close();
-                            ?></div>
-                    </div><?php
+                    <!-- Removed old search form -->
+                    <?php
                     if (!empty($ads_under_search->active) && $config->advertise):
                         $img = array(
                             'src' => $ads_under_search->img,
@@ -321,10 +304,13 @@ $checkAuth = \Jotun\JotunAuth::instance()->check();
         <div class="row show">
             <div class="span3 show" id="footer_banner"></div>
             <div class="span8" id="footer_label" style="margin-left:80px">
-                <div class="phone_block" style="margin-top:8px"><span
-                        class="footer_highlight">Địa chỉ:</span> <?php echo html_escape($config->contact); ?></div>
-                <div style="margin-top:-10px;margin-right:125px"><span
-                        class="footer_highlight">Điện thoại: </span><?php getPhone($config->phone); ?></div>
+                <div class="phone_block" style="margin-top:8px">
+                    <span class="footer_highlight">Địa chỉ:</span> <?php echo html_escape($config->contact); ?>
+                    <span class="footer_highlight">Mã Số Thuế:</span> <?php echo $config->tax_code; ?>
+                </div>
+                <div style="margin-top:-10px;margin-right:125px">
+                    <span class="footer_highlight">Điện thoại: </span><?php getPhone($config->phone); ?>
+                </div>
                 <div class="footer_highlight copyright">Code: <a href="mailto:ngonam22@yahoo.com.vn">Ngonam</a><br/>
                     Design1: <a href="#">Lai Nguyen</a><br/>Design2: <a href="#">Bao Nguyen</a><br/>Edit: Nguyen Trinh
                 </div>

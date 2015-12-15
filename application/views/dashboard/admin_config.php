@@ -57,7 +57,31 @@
 				));
 				echo form_error('contact');
 			?></div>
-		</div><div class="control-group">
+		</div>
+		<div class="control-group">
+			<label class="control-label" >Mã Số Thuế</label>
+			<div class="controls"><?php
+				echo form_input(array(
+					'name'=>'tax_code','value'=>set_value('tax_code', $config->tax_code),
+					'placeholder'=>'Mã Số Thuế','id'=>'tax-code',
+					'autocomplete' => 'off'
+				));
+				echo form_error('tax_code');
+			?></div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" >Email</label>
+			<div class="controls"><?php
+				echo form_input(array(
+					'name'=>'email','value'=>set_value('email', $config->email),
+					'placeholder'=>'Email','id'=>'email',
+					'type'=>'email',
+					'autocomplete' => 'off'
+				));
+				echo form_error('email');
+			?></div>
+		</div>
+		<div class="control-group">
 			<label class="control-label" for="phone">Phone</label>
 			<div class="controls"><?php
 				echo form_input(array(

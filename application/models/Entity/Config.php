@@ -84,6 +84,20 @@ class Config
      */
     private $ckt;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tax_code", type="string", length=255, nullable=false)
+     */
+    private $tax_code;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255, nullable=false)
+     */
+    private $email;
+
 
 
     /**
@@ -301,5 +315,51 @@ class Config
     public function getCkt()
     {
         return $this->ckt;
+    }
+
+    /**
+     * Set tax_code
+     *
+     * @param string $tax_code
+     * @return Config
+     */
+    public function setTaxcode($tax_code)
+    {
+        $this->tax_code = $tax_code;
+
+        return $this;
+    }
+
+    /**
+     * Get tax_code
+     *
+     * @return string
+     */
+    public function getTaxcode()
+    {
+        return $this->tax_code;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Config
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
     }
 }

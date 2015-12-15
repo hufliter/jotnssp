@@ -1,0 +1,1 @@
+ALTER TABLE `config` ADD `tax_code` VARCHAR(255) NOT NULL AFTER `ckt`, ADD `email` VARCHAR(255) NOT NULL AFTER `tax_code`;

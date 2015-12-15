@@ -178,6 +178,8 @@ class Dashboard_model extends CI_Model {
 			'ckt' => $this->input->post('ckt'),
 			'cks' => $this->input->post('cks'),
 			'gnh' => $this->input->post('gnh'),
+            'tax_code' => $this->input->post('tax_code'),
+            'email' => $this->input->post('email'),
 		);
 
 		$this->db->where('id',1);

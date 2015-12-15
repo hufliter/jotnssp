@@ -153,7 +153,6 @@ class AppController extends CI_Controller
     {
         $this->load->library('user_agent');
         $this->load->helper('cookie');
-
         $this->data = array_merge($this->data, $this->site->back('config'));
         $this->data = array_merge($this->data, $this->site->back('lastNews'));
         $this->data = array_merge($this->data, $this->site->back('category'));

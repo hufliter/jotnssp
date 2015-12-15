@@ -37,6 +37,12 @@ $config = array(
 		),array(
 			'field' => 'captcha','label' => 'Captcha',
 			'rules' => 'trim|required|captcha'
+		),array(
+			'field' => 'tax_code','label' => 'Tax Code',
+			'rules' => 'trim|required|min_length[5]'
+		),array(
+			'field' => 'email','label' => 'Email',
+			'rules' => 'trim|required|email'
 		)
 	),
 	'login' => array(

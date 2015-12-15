@@ -600,7 +600,12 @@ body {
     margin-top: 48px;
 
 }
-
+.search-tag-box {
+	float: left;
+	margin-top: 40px;
+	margin-left: 10px;
+	position: relative;
+}
 /** thuat_layout : login section  **/
 .clear
 {
@@ -718,4 +723,15 @@ td.currency {
 
 label.error {
     color: #950000;
+}
+.search_tag
+{
+    overflow: hidden;
+    position: fixed;
+    width: 159px;
+    height: 87px;
+    background: url("../images/front/bg_cart.png") no-repeat;
+    z-index: 999;
+    right: 200px;
+    text-align: center;
 }
