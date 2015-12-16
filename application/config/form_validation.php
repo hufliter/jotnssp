@@ -292,5 +292,41 @@ $config = array(
             'label' => 'Số ĐT',
             'rules' => 'trim|required|numeric|max_length[255]'
         )
+    ),
+    'policyAdd' => array(
+        array(
+            'field' => 'name',
+            'label' => 'Tên Chính sách',
+            'rules' => 'trim|required|max_length[255]'
+        ),
+        array(
+            'field' => 'link',
+            'label' => 'Đường Dẫn',
+            'rules' => 'trim|required|max_length[255]'
+        ),
+        array(
+			'field' => 'status','label' => 'Trạng Thái',
+			'rules' => 'required|is_natural'
+		),
+    ),
+    'policyEdit' => array(
+    	array(
+			'field' => 'id','label' => 'ID',
+			'rules' => 'trim|required|is_natural_no_zero'
+		),
+        array(
+            'field' => 'name',
+            'label' => 'Tên Chính sách',
+            'rules' => 'trim|required|max_length[255]'
+        ),
+        array(
+            'field' => 'link',
+            'label' => 'Đường Dẫn',
+            'rules' => 'trim|required|max_length[255]'
+        ),
+        array(
+			'field' => 'status','label' => 'Trạng Thái',
+			'rules' => 'required|is_natural'
+		),
     )
 );
